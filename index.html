@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maison Élite Nails — Salón de uñas en Castellón</title>
+<meta name="description" content="Maison Élite Nails, salón de uñas y belleza en Castellón (C/ Campoamor, 15). Manicura semipermanente, rusa, extensiones de gel, cejas y pestañas. Reserva tu cita online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --negro: #0f0d0b;
+    --negro-2: #1a1714;
+    --oro: #c6a15b;
+    --oro-claro: #e6cd96;
+    --marfil: #faf6ef;
+    --marfil-2: #f2eadc;
+    --tinta: #2b2520;
+    --suave: #7a6f63;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Montserrat', sans-serif; background: var(--marfil); color: var(--tinta); line-height: 1.7; }
+  h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 600; }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+
+  header {
+    position: fixed; inset: 0 0 auto 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 6%; background: rgba(15,13,11,.92); backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(198,161,91,.25);
+  }
+  .marca { display: flex; align-items: center; gap: 12px; color: var(--marfil); }
+  .mono { width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--oro); display: grid; place-items: center; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1.15rem; color: var(--oro-claro); letter-spacing: 1px; }
+  .marca b { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 600; letter-spacing: 2px; line-height: 1; }
+  .marca small { font-size: .58rem; letter-spacing: 4px; color: var(--oro-claro); text-transform: uppercase; }
+  nav ul { list-style: none; display: flex; gap: 28px; align-items: center; }
+  nav a { font-size: .76rem; letter-spacing: 2px; text-transform: uppercase; color: #cfc5b6; transition: color .2s; }
+  nav a:hover { color: var(--oro-claro); }
+  nav .reservar { border: 1px solid var(--oro); color: var(--oro-claro); padding: 9px 18px; }
+  nav .reservar:hover { background: var(--oro); color: var(--negro); }
+
+  .hero { background: radial-gradient(60% 70% at 80% 30%, rgba(198,161,91,.18), transparent 70%), var(--negro); color: var(--marfil); min-height: 100vh; display: grid; grid-template-columns: 1.1fr 1fr; align-items: center; gap: 50px; padding: 120px 7% 70px; }
+  .sello { display: inline-flex; align-items: center; gap: 12px; font-size: .72rem; letter-spacing: 5px; text-transform: uppercase; color: var(--oro-claro); margin-bottom: 24px; }
+  .sello::before { content: ""; width: 36px; height: 1px; background: var(--oro); }
+  .hero h1 { font-size: clamp(2.9rem, 6vw, 5rem); line-height: 1; margin-bottom: 24px; }
+  .hero h1 em { color: var(--oro-claro); font-style: italic; }
+  .hero p { color: #d9cfbf; font-size: 1.05rem; max-width: 470px; margin-bottom: 34px; font-weight: 300; }
+  .botones { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn { display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, var(--oro-claro), var(--oro)); color: var(--negro); padding: 15px 30px; font-size: .8rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; transition: transform .2s, box-shadow .2s; }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(198,161,91,.3); }
+  .btn-linea { background: transparent; color: var(--marfil); border: 1px solid rgba(250,246,239,.45); }
+  .btn-linea:hover { border-color: var(--oro); box-shadow: none; }
+  .btn-oscuro { background: var(--negro); color: var(--oro-claro); }
+  .nota-hero { display: flex; flex-wrap: wrap; gap: 22px 34px; margin-top: 38px; }
+  .nota-hero b { display: block; font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; color: var(--oro-claro); line-height: 1; }
+  .nota-hero span { font-size: .72rem; letter-spacing: 1.5px; text-transform: uppercase; color: #a89c8b; }
+  .marco { position: relative; padding: 18px; border: 1px solid rgba(198,161,91,.55); }
+  .marco img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+  .marco::after { content: "MÉ"; position: absolute; right: -22px; bottom: -22px; width: 74px; height: 74px; border-radius: 50%; background: var(--negro); border: 1px solid var(--oro); display: grid; place-items: center; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 700; color: var(--oro-claro); }
+
+  section { padding: 100px 6%; max-width: 1180px; margin: 0 auto; }
+  .titulillo { display: block; text-align: center; font-size: .72rem; letter-spacing: 5px; text-transform: uppercase; color: var(--oro); margin-bottom: 10px; font-weight: 600; }
+  .titulo { text-align: center; font-size: clamp(2.2rem, 4.5vw, 3.2rem); line-height: 1.1; margin-bottom: 16px; }
+  .intro { text-align: center; color: var(--suave); max-width: 600px; margin: 0 auto 54px; font-weight: 300; }
+
+  .salon { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+  .salon img { width: 100%; aspect-ratio: 4/3; object-fit: cover; box-shadow: 0 30px 60px rgba(43,37,32,.18); }
+  .salon h2 { font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1.1; margin-bottom: 18px; }
+  .salon h2 em { color: var(--oro); }
+  .salon p { color: var(--suave); margin-bottom: 16px; font-weight: 300; }
+  .ventajas { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 24px; }
+  .ventajas div { display: flex; gap: 12px; align-items: flex-start; font-size: .92rem; }
+  .ventajas i { font-style: normal; color: var(--oro); font-size: 1.1rem; line-height: 1.4; }
+
+  .fondo-osc { background: var(--negro); color: var(--marfil); }
+  .fondo-osc .intro { color: #b7ab99; }
+  .galeria { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 260px; gap: 12px; }
+  .galeria img { width: 100%; height: 100%; object-fit: cover; }
+  .galeria img:nth-child(1), .galeria img:nth-child(8) { grid-column: span 2; }
+
+  .carta { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .grupo { background: #fff; border: 1px solid rgba(198,161,91,.3); padding: 34px 28px; position: relative; }
+  .grupo::before { content: ""; position: absolute; inset: 8px; border: 1px solid rgba(198,161,91,.15); pointer-events: none; }
+  .grupo h3 { font-size: 1.65rem; color: var(--tinta); margin-bottom: 16px; text-align: center; }
+  .item { display: flex; justify-content: space-between; gap: 14px; padding: 10px 0; border-bottom: 1px dashed rgba(198,161,91,.4); font-size: .92rem; }
+  .item:last-child { border-bottom: 0; }
+  .item small { display: block; color: var(--suave); font-size: .78rem; font-weight: 300; }
+  .item b { font-weight: 600; white-space: nowrap; color: var(--oro); }
+  .packs { margin-top: 26px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .pack { background: var(--negro); color: var(--marfil); padding: 22px 24px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  .pack span { font-size: .9rem; }
+  .pack span small { display: block; color: #a89c8b; font-size: .75rem; }
+  .pack b { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--oro-claro); white-space: nowrap; }
+  .reservar-centro { text-align: center; margin-top: 40px; }
+
+  .resenas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .resena { background: var(--marfil-2); padding: 30px; border-left: 2px solid var(--oro); }
+  .resena .estrellas { color: var(--oro); letter-spacing: 3px; margin-bottom: 10px; }
+  .resena p { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-style: italic; line-height: 1.4; margin-bottom: 12px; }
+  .resena span { font-size: .8rem; color: var(--suave); }
+
+  .info { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+  .horario { width: 100%; border-collapse: collapse; }
+  .horario td { padding: 13px 4px; border-bottom: 1px solid rgba(198,161,91,.3); }
+  .horario td:last-child { text-align: right; color: var(--suave); }
+  .dir { margin-top: 22px; color: var(--suave); }
+  .dir b { color: var(--tinta); font-weight: 600; }
+  .mapa { border: 1px solid rgba(198,161,91,.5); padding: 10px; background: #fff; }
+  .mapa img { width: 100%; }
+
+  .cta { text-align: center; padding: 110px 6%; background: radial-gradient(50% 80% at 50% 0%, rgba(198,161,91,.2), transparent 70%), var(--negro); color: var(--marfil); }
+  .cta h2 { font-size: clamp(2.3rem, 5vw, 3.4rem); margin-bottom: 14px; }
+  .cta p { color: #cfc5b6; max-width: 480px; margin: 0 auto 34px; font-weight: 300; }
+  .cta .botones { justify-content: center; }
+
+  footer { background: var(--negro); color: #8a7f70; text-align: center; padding: 26px 6%; font-size: .8rem; border-top: 1px solid rgba(198,161,91,.15); }
+
+  .wa-flotante { position: fixed; right: 22px; bottom: 22px; z-index: 120; width: 58px; height: 58px; border-radius: 50%; background: #25d366; display: grid; place-items: center; box-shadow: 0 10px 25px rgba(0,0,0,.25); }
+  .wa-flotante svg { width: 30px; height: 30px; fill: #fff; }
+
+  @media (max-width: 900px) {
+    nav ul li:not(:last-child) { display: none; }
+    .hero { grid-template-columns: 1fr; padding-top: 110px; }
+    .marco { max-width: 420px; }
+    .marco::after { right: 10px; bottom: 10px; width: 60px; height: 60px; font-size: 1.3rem; }
+    .hero { overflow: hidden; }
+    body { overflow-x: hidden; }
+    .salon, .carta, .resenas, .info, .packs { grid-template-columns: 1fr; }
+    .galeria { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 180px; }
+    .galeria img:nth-child(1) { grid-row: span 1; }
+    section { padding: 72px 6%; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="marca" href="#inicio"><span class="mono">MÉ</span><span><b>MAISON ÉLITE</b><small>Nails · Castellón</small></span></a>
+  <nav>
+    <ul>
+      <li><a href="#salon">El salón</a></li>
+      <li><a href="#trabajos">Trabajos</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#ubicacion">Ubicación</a></li>
+      <li><a class="reservar" href="https://maisonelitenails.booksy.com/a/" target="_blank" rel="noopener">Reservar</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero" id="inicio" style="max-width:none;">
+  <div>
+    <span class="sello">Salón de uñas · Castellón</span>
+    <h1>El arte de unas<br><em>uñas de élite</em></h1>
+    <p>Manicura semipermanente, rusa, extensiones de gel, pedicura, cejas y pestañas en pleno centro de Castellón. Trabajamos con el Sistema Profesional Madame Prestige.</p>
+    <div class="botones">
+      <a class="btn" href="https://maisonelitenails.booksy.com/a/" target="_blank" rel="noopener">Reservar cita online</a>
+      <a class="btn btn-linea" href="https://wa.me/34624178197" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+    <div class="nota-hero">
+      <div><b>4,7 ★</b><span>49 reseñas</span></div>
+      <div><b>☕</b><span>Café de cortesía</span></div>
+      <div><b>C/ Campoamor</b><span>Centro</span></div>
+    </div>
+  </div>
+  <div class="marco"><img src="img/hero.jpeg" alt="Manicura en Maison Élite Nails"></div>
+</section>
+
+<section id="salon">
+  <div class="salon">
+    <img src="img/local.jpeg" alt="Fachada de Maison Élite Nails en Castellón">
+    <div>
+      <span class="titulillo" style="text-align:left;">El salón</span>
+      <h2>Cuidamos cada detalle,<br><em>de la cutícula al acabado</em></h2>
+      <p>Maison Élite Nails es un salón de uñas y belleza en la calle Campoamor, en el centro de Castellón. Un espacio pensado para que te sientas cuidada desde que entras, con un equipo de especialistas y productos profesionales de la más alta calidad.</p>
+      <p>Uñas bonitas, limpias y duraderas, ya sea una manicura exprés para salir corriendo o unas extensiones a medida.</p>
+      <div class="ventajas">
+        <div><i>✦</i>Sistema Profesional Madame Prestige</div>
+        <div><i>✦</i>Higiene y material esterilizado</div>
+        <div><i>✦</i>Café de cortesía para todas</div>
+        <div><i>✦</i>Reserva online en un minuto</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="fondo-osc">
+<section id="trabajos">
+  <span class="titulillo">Nuestro trabajo</span>
+  <h2 class="titulo">Trabajos recientes</h2>
+  <p class="intro">Nude elegante, francesas con color, pedicuras perfectas y diseños a medida.</p>
+  <div class="galeria">
+    <img src="img/unas_1.jpeg" alt="Manicura blanca">
+    <img src="img/unas_2.jpeg" alt="Manicura nude">
+    <img src="img/unas_3.jpeg" alt="Pedicura naranja">
+    <img src="img/unas_4.jpeg" alt="Francesa de colores">
+    <img src="img/unas_5.jpeg" alt="Uñas almendra rosa">
+    <img src="img/unas_6.jpeg" alt="Uñas con brillo">
+    <img src="img/unas_7.jpeg" alt="Pedicura nude">
+    <img src="img/unas_8.jpeg" alt="Uñas rojas con diseño">
+  </div>
+</section>
+</div>
+
+<section id="servicios">
+  <span class="titulillo">Carta de servicios</span>
+  <h2 class="titulo">Servicios y precios</h2>
+  <p class="intro">Algunos de nuestros servicios más pedidos. Puedes ver la carta completa y reservar directamente en nuestra agenda online.</p>
+  <div class="carta">
+    <div class="grupo">
+      <h3>Manicura</h3>
+      <div class="item"><div>Semipermanente exprés<small>Con Base Strong 20,90 €</small></div><b>17,90 €</b></div>
+      <div class="item"><div>Semipermanente dry<small>Con limpieza de cutícula</small></div><b>23 €</b></div>
+      <div class="item"><div>Manicura rusa profesional</div><b>20 €</b></div>
+      <div class="item"><div>Manicura de refuerzo<small>Nivelación</small></div><b>30 €</b></div>
+      <div class="item"><div>Relleno / mantenimiento</div><b>33 €</b></div>
+      <div class="item"><div>Extensión de uñas<small>Softgel, gel o acrygel</small></div><b>desde 35 €</b></div>
+      <div class="item"><div>Manicura infantil<small>Hasta 12 años</small></div><b>10 €</b></div>
+    </div>
+    <div class="grupo">
+      <h3>Manos y pies</h3>
+      <div class="item"><div>Exprés + esmalte tradicional</div><b>30 €</b></div>
+      <div class="item"><div>Semipermanente exprés</div><b>35 €</b></div>
+      <div class="item"><div>Dry + esmalte tradicional</div><b>43 €</b></div>
+      <div class="item"><div>Semipermanente dry</div><b>46 €</b></div>
+      <div class="item"><div>Semipermanente spa<small>Con hidratación y masaje</small></div><b>60 €</b></div>
+    </div>
+    <div class="grupo">
+      <h3>Cejas y pestañas</h3>
+      <div class="item"><div>Lifting de pestañas<small>Con tinte 40 €</small></div><b>30 €</b></div>
+      <div class="item"><div>Laminado de cejas<small>Con tinte 40 €</small></div><b>30 €</b></div>
+      <div class="item"><div>Diseño de cejas + depilación</div><b>30 €</b></div>
+      <div class="item"><div>Depilación de cejas + tinte</div><b>22 €</b></div>
+      <div class="item"><div>Tinte de cejas</div><b>14 €</b></div>
+    </div>
+  </div>
+  <div class="packs">
+    <div class="pack"><span>Cejas + labio con hilo<small>Servicio exprés</small></span><b>15 €</b></div>
+    <div class="pack"><span>Uñas semi + cejas<small>Servicio exprés completo</small></span><b>29,90 €</b></div>
+    <div class="pack"><span>Pack Mirada Élite<small>Lifting + laminado + tinte</small></span><b>75 €</b></div>
+  </div>
+  <div class="reservar-centro"><a class="btn btn-oscuro" href="https://maisonelitenails.booksy.com/a/" target="_blank" rel="noopener">Ver carta completa y reservar</a></div>
+</section>
+
+<div style="background:var(--marfil-2);">
+<section id="opiniones">
+  <span class="titulillo">Opiniones</span>
+  <h2 class="titulo">Lo que dicen nuestras clientas</h2>
+  <p class="intro">4,7 de media en Booksy con 49 reseñas verificadas.</p>
+  <div class="resenas">
+    <div class="resena" style="background:#fff;"><div class="estrellas">★★★★★</div><p>“Encantada con mis uñas, Angie es súper profesional.”</p><span>Meritxell · Relleno</span></div>
+    <div class="resena" style="background:#fff;"><div class="estrellas">★★★★★</div><p>“Como siempre, súper bien. Muy profesional y resultado excelente.”</p><span>Joana · Relleno</span></div>
+    <div class="resena" style="background:#fff;"><div class="estrellas">★★★★★</div><p>“Fui con las uñas destrozadas y salí enamorada de cómo me las dejaron.”</p><span>María · Extensiones de gel</span></div>
+  </div>
+</section>
+</div>
+
+<section id="ubicacion">
+  <span class="titulillo">Visítanos</span>
+  <h2 class="titulo">Horario y ubicación</h2>
+  <p class="intro">En la calle Campoamor, a un paso de la Plaza Cardona Vives y del Mercado Central.</p>
+  <div class="info">
+    <div>
+      <table class="horario">
+        <tr><td>Lunes</td><td>09:00 – 14:00 · 15:00 – 20:00</td></tr>
+        <tr><td>Martes</td><td>09:00 – 14:00 · 15:00 – 20:00</td></tr>
+        <tr><td>Miércoles</td><td>09:00 – 14:00 · 15:00 – 20:00</td></tr>
+        <tr><td>Jueves</td><td>09:00 – 14:00 · 15:00 – 20:00</td></tr>
+        <tr><td>Viernes</td><td>09:00 – 14:00 · 15:00 – 20:00</td></tr>
+        <tr><td>Sábado</td><td>09:00 – 14:00</td></tr>
+        <tr><td>Domingo</td><td>Cerrado</td></tr>
+      </table>
+      <p class="dir"><b>Carrer de Campoamor, 15, local</b> · 12001 Castelló de la Plana</p>
+      <p class="dir">Tel / WhatsApp: <b>624 17 81 97</b></p>
+    </div>
+    <div class="mapa"><img src="img/map.png" alt="Mapa de Maison Élite Nails en Castellón"></div>
+  </div>
+</section>
+
+<div class="cta">
+  <h2>Reserva tu cita</h2>
+  <p>Elige servicio, día y hora en nuestra agenda online, o escríbenos por WhatsApp y te ayudamos.</p>
+  <div class="botones">
+    <a class="btn" href="https://maisonelitenails.booksy.com/a/" target="_blank" rel="noopener">Reservar cita online</a>
+    <a class="btn btn-linea" href="https://wa.me/34624178197" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+  </div>
+</div>
+
+<footer>© 2026 Maison Élite Nails · Carrer de Campoamor, 15, Castelló de la Plana · Sistema Profesional Madame Prestige</footer>
+
+<a class="wa-flotante" href="https://wa.me/34624178197" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.85 9.85 0 0 0 12.04 2zm5.8 14.09c-.24.68-1.43 1.3-1.97 1.35-.5.05-.98.24-3.3-.69-2.79-1.1-4.56-3.95-4.7-4.13-.13-.18-1.12-1.49-1.12-2.85s.71-2.02.97-2.3c.25-.27.55-.34.73-.34h.53c.17 0 .4-.06.62.48.24.56.8 1.94.87 2.08.07.14.12.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.13-.28.28-.12.55.16.27.71 1.17 1.52 1.89 1.05.93 1.93 1.22 2.2 1.36.27.14.43.12.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.6-.14.25.09 1.58.75 1.85.88.27.14.45.2.52.32.07.11.07.66-.17 1.33z"/></svg>
+</a>
+
+</body>
+</html>
